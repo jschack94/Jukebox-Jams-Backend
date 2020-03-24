@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_24_021708) do
+ActiveRecord::Schema.define(version: 2020_03_24_233434) do
 
-  create_table "playlist_songs", force: :cascade do |t|
+  create_table "playlist_tracks", force: :cascade do |t|
     t.integer "track_id"
     t.integer "playlist_id"
     t.datetime "created_at", precision: 6, null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_03_24_021708) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "songs", force: :cascade do |t|
+  create_table "tracks", force: :cascade do |t|
     t.string "name"
     t.string "artists"
     t.string "image"
@@ -39,13 +39,9 @@ ActiveRecord::Schema.define(version: 2020_03_24_021708) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "name"
     t.string "username"
-    t.string "access_token"
-    t.string "refresh_token"
-    t.string "spotify_url"
-    t.string "profile_img_url"
-    t.string "href"
-    t.string "uri"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

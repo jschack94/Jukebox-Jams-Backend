@@ -1,6 +1,6 @@
-class CreateSongs < ActiveRecord::Migration[6.0]
+class CreateTracks < ActiveRecord::Migration[6.0]
   def change
-    create_table :songs do |t|
+    create_table :tracks do |t|
       t.string :name
       t.string :artists
       t.string :image
