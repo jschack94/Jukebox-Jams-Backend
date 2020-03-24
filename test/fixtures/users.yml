@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  access_token: MyString
+  refresh_token: MyString
+  spotify_url: MyString
+  profile_img_url: MyString
+  href: MyString
+  uri: MyString
+
+two:
+  username: MyString
+  access_token: MyString
+  refresh_token: MyString
+  spotify_url: MyString
+  profile_img_url: MyString
+  href: MyString
+  uri: MyString
