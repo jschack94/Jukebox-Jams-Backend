@@ -39,7 +39,7 @@ class Api::V1::TracksController < ApplicationController
 end
 
 def surprise
-    s_tracks = RSpotify::Track.search("Thriller")
+    s_tracks = RSpotify::Track.search("Funky Town")
     @tracks = s_tracks.map do |s_track|
       Track.new_from_spotify_track(s_track)
     end
