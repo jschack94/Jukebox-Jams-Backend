@@ -16,11 +16,13 @@ Rails.application.routes.draw do
           get :top_100
           get :random
           get :search
+          get :surprise
         end
       end
     end
   end
 end
+
   
 
  
