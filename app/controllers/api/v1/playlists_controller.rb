@@ -1,5 +1,5 @@
 class Api::V1::PlaylistsController < ApplicationController
-    # skip_before_action :verify_authenticity_token
+  #skip_before_action :authorized, only: [:index, :create]
     
       def index
         @playlists = Playlist.all
@@ -14,26 +14,6 @@ class Api::V1::PlaylistsController < ApplicationController
         render json: @playlist
       end
     
-    
-      # def create
-      #   # byebug
-      #   # see if this track exists in the db
-      #   track = Track.find_by(spotify_id: params[:spotify_id])
-      #   unless track
-      #     # find the spotify song from the api
-      #     s_track = RSpotify::Track.find(params[:spotify_id])
-      #     # create a new track
-      #     track = Track.create_from_spotify_track(s_track)
-      #   end
-      #
-      #   @playlist = Playlist.create(
-      #     name: params[:name],
-      #     user_id: params[:user_id],
-      #     spotify_id: params[:spotify_id]
-      #   )
-      #
-      #   render json: @playlist
-      # end
     
       def update
         @playlist.update(playlist_params)

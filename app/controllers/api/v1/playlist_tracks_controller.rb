@@ -1,15 +1,11 @@
 class Api::V1::PlaylistTracksController < ApplicationController
+  #skip_before_action :authorized
 
     def index
       @playlist_tracks = PlaylistTrack.all
       render json: @playlist_tracks
     end
 
-
-    # def create
-    #   @playlist_track = PlaylistTrack.create(playlist_track_params)
-    #   render json: @playlist_track
-    # end
 
     def create
       # byebug

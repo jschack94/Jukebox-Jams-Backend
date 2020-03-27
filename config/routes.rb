@@ -10,7 +10,8 @@ Rails.application.routes.draw do
         get '/profile', to: 'users#profile'
         get '/signup', to: 'auth#create'
         post '/login', to: 'auth#create'
-      resources :tracks do
+      resources :playlist_tracks
+        resources :tracks do
         collection do
           get :top_100
           get :random
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
     end
   end
 end
+
 
   
 
